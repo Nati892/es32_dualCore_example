@@ -1,4 +1,6 @@
 
+#include "TestLib.h"
+
 //GLOBALS
 int a =0;
 TaskHandle_t Task1;
@@ -22,6 +24,7 @@ xTaskCreatePinnedToCore(
 
 
 void loop() {
+  foo();
   Serial.print("print count: ");
   Serial.println(a);
   a++;
